@@ -12,15 +12,23 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.AppCompat.Light" >
         <activity
             android:name="meetup.amey.com.meetup.MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="meetup.amey.com.meetup.loginActivity"
+            android:theme="@style/AppTheme.Dark" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="meetup.amey.com.meetup.SignupActivity"
+            android:label="SignupActivity" >
         </activity>
         <activity
             android:name="meetup.amey.com.meetup.fragment"
