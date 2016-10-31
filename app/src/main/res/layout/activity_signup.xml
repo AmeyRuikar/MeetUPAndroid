@@ -9,64 +9,219 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:paddingTop="20dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
         <ImageView android:src="@mipmap/ic_launcher"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="12dp"
             android:layout_gravity="center_horizontal" />
 
-        <!--  Name Label -->
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Tell us a little bit about yourself..."
+            android:gravity="left"
+            android:textSize="20dip" />
+
+
+        <!--  fb Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="2dp">
             <EditText android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="Name" />
+                android:hint="facebook name" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Email Label -->
+        <!-- username Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="2dp">
             <EditText android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Email" />
+                android:hint="username" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Password Label -->
-        <android.support.design.widget.TextInputLayout
+
+        <TextView android:id="@+id/interests"
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="5dp"
+            android:text="Suggested Interests"
+            android:gravity="center|left"
+            android:textSize="16dip"/>
+
+
+
+
+        <!-- interests  list -->
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_password"
+            android:background="@color/black"
+            android:padding="20px"
+            >
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password"/>
-        </android.support.design.widget.TextInputLayout>
+                android:background="@color/black"
+                android:paddingLeft="20px"
+                >
 
-        <!-- Signup Button -->
+                <TextView android:id="@+id/pill1"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Adventure Sports"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:textSize="16dip" />
+
+                <TextView android:id="@+id/pill2"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Food"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:paddingLeft="20px"
+                >
+
+                <TextView android:id="@+id/pill3"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Adventure Sports"
+                    android:gravity="center"
+                    android:textSize="16dip" />
+
+                <TextView android:id="@+id/pill4"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Food"
+                    android:gravity="center"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5px"
+            android:weightSum="1">
+        <!-- add interests Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="245dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:weightSum="1"
+                android:layout_weight="0.52">
+                <EditText android:id="@+id/input_password"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Add more interests" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- update Button -->
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="17dp"
+                android:src="@mipmap/add_button3"
+                android:id="@+id/add_button" />
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/transport"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Ride Options"
+            android:gravity="left"
+            android:textSize="16dip"
+            android:layout_marginTop="12dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:checked="true"
+                android:textSize="20dp"
+                android:text="Uber"
+                android:layout_weight="0.78" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                android:text="Lyft" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="I got my own ride" />
+
+        </RadioGroup>
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:text="Create Account"/>
+            android:text="Update Profile"/>
 
         <TextView android:id="@+id/link_login"
             android:layout_width="fill_parent"

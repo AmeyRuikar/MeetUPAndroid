@@ -89,16 +89,12 @@ public class loginActivity extends AppCompatActivity {
 
                 }
 
-
-
                 LoginButton loginButton;
                 CallbackManager callbackManager;
-
 
                 loginButton = (LoginButton) findViewById(R.id.login_button);
                 loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
                 callbackManager = CallbackManager.Factory.create();
-
 
                 loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                     @Override
@@ -157,10 +153,13 @@ public class loginActivity extends AppCompatActivity {
                     @Override
                     public void onCancel() {
 
+                        Log.d(TAG, "cancelled");
                     }
 
                     @Override
                     public void onError(FacebookException error) {
+
+                        Log.d(TAG, error.toString());
 
                     }
                 });

@@ -5,11 +5,13 @@ package meetup.amey.com.meetup;
  */
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +47,45 @@ public class SignupActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //pills for interests
+        TextView pill1 = (TextView) findViewById(R.id.pill1);
+        TextView pill2 = (TextView) findViewById(R.id.pill2);
+        TextView pill3 = (TextView) findViewById(R.id.pill3);
+        TextView pill4 = (TextView) findViewById(R.id.pill4);
+
+        pill1.setText("Theatre");
+        pill1.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.cut_symbol, 0);
+
+        pill2.setText("Food");
+        pill2.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.cut_symbol, 0);
+
+        pill3.setText("Sports");
+        pill3.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.cut_symbol, 0);
+
+        pill4.setText("Music");
+        pill4.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.cut_symbol, 0);
+
+        //eof interests
+
+        /*
+        Button add = (Button) findViewById(R.id.add_button);
+        add.setText("");
+        add.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.mipmap.add_button3, 0);
+        */
+
+        RadioButton r0 = (RadioButton) findViewById(R.id.radio0);
+        RadioButton r1 = (RadioButton) findViewById(R.id.radio1);
+        RadioButton r2 = (RadioButton) findViewById(R.id.radio2);
+        r0.setText("");
+        r1.setText("");
+        r0.setTextSize(20);
+        r1.setTextSize(20);
+        r0.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_stat_name2 , 0);
+        r1.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_action_name, 0);
+
+
+
     }
 
     public void signup() {
