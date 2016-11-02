@@ -15,10 +15,14 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.util.*;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+import com.scalified.fab.ActionButton;
 
 public class fragment extends FragmentActivity {
 
@@ -27,11 +31,32 @@ public class fragment extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
+        /*
+
         ActionBar ab = getActionBar();
-        //ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setSubtitle("Meet UP");
+
 
         ab.setTitle("Meet UP");
         ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1da1f2")));
+
+        */
+
+        ActionButton actionButton = (ActionButton) findViewById(R.id.action_button);
+
+        actionButton.moveLeft(100.0f);
+
+        actionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Add", "new task can be added from here");
+
+            }
+        });
+
+        //actionButton.moveRight(1000.0f);
 
 
         ViewPager   vp = (ViewPager)findViewById(R.id.view_pager);
