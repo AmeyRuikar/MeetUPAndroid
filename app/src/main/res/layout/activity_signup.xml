@@ -94,7 +94,8 @@
                     android:text="Adventure Sports"
                     android:gravity="center"
                     android:layout_gravity="left"
-                    android:textSize="16dip" />
+                    android:textSize="16dip" >
+                </TextView>
 
                 <TextView android:id="@+id/pill2"
                     android:layout_width="130dp"
@@ -152,12 +153,12 @@
                 <EditText android:id="@+id/input_password"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:hint="Add more interests" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <!-- update Button -->
+            <!-- add Button -->
             <ImageButton
                 android:layout_width="45dp"
                 android:layout_height="45dp"

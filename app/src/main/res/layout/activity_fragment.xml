@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:weightSum="1">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <android.support.design.widget.TabLayout
-        android:background="#1da1f2"
-        android:layout_alignParentTop="true"
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        style="@style/CustomTabLayout"
-        app:tabSelectedTextColor="#ffffff"
-        />
-    <android.support.v4.view.ViewPager
-        android:layout_below="@id/tab_layout"
-        android:id="@+id/view_pager"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:weightSum="1">
+
+        <android.support.design.widget.TabLayout
+            android:background="#1da1f2"
+            android:layout_alignParentTop="true"
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            style="@style/CustomTabLayout"
+            app:tabSelectedTextColor="#ffffff"
+            />
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/tab_layout"
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+    <!--
+    <android.support.design.widget.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="60dp"
+    android:clickable="true"
+    android:src="@mipmap/add_button3"
+    app:layout_anchor="@id/view_pager"
+    app:layout_anchorGravity="bottom|right|end"/>
+    -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        >
+        <com.scalified.fab.ActionButton
+            android:id="@+id/action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="60dp"
+            fab:type="DEFAULT"
+            fab:button_color="#FF0000"
+            fab:button_colorPressed="@color/fab_material_lime_900"
+            fab:image="@drawable/fab_plus_icon"
+            fab:image_size="24dp"
+            fab:shadow_color="#757575"
+            fab:shadow_radius="1.0dp"
+            fab:shadow_xOffset="0.5dp"
+            fab:shadow_yOffset="1.0dp"
+            fab:stroke_color="@color/fab_material_blue_grey_500"
+            fab:stroke_width="1.0dp"
+            fab:button_colorRipple="@color/fab_material_black"
+            fab:rippleEffect_enabled="true"
+            fab:shadowResponsiveEffect_enabled="true"
+            fab:show_animation="@anim/fab_roll_from_down"
+            fab:hide_animation="@anim/fab_roll_to_down"
 
-</LinearLayout>
+            />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
