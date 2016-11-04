@@ -5,11 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:weightSum="1">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:background="@color/primary"
+            app:layout_scrollFlags="scroll|enterAlways" />
 
         <android.support.design.widget.TabLayout
             android:background="#1da1f2"
@@ -19,27 +27,59 @@
             android:layout_height="48dp"
             style="@style/CustomTabLayout"
             app:tabSelectedTextColor="#ffffff"
-            />
+            >
+        </android.support.design.widget.TabLayout>
+
+
         <android.support.v4.view.ViewPager
             android:layout_below="@id/tab_layout"
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+
+        </android.support.v4.view.ViewPager>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
 
     <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:weightSum="1">
+
+
+
+
+
+    </LinearLayout>
+    -->
+
+
     <android.support.design.widget.FloatingActionButton
-    android:id="@+id/fab"
+    android:id="@+id/action_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="60dp"
     android:clickable="true"
     android:src="@mipmap/add_button3"
+    app:backgroundTint="@color/black"
+        app:rippleColor="@color/com_facebook_blue"
+        app:pressedTranslationZ="12dp"
     app:layout_anchor="@id/view_pager"
     app:layout_anchorGravity="bottom|right|end"/>
-    -->
+
+
+
+
+
+    <!--
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:fab="http://schemas.android.com/apk/res-auto"
@@ -72,5 +112,6 @@
 
             />
     </RelativeLayout>
+    -->
 
 </android.support.design.widget.CoordinatorLayout>

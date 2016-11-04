@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -23,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import com.scalified.fab.ActionButton;
+import android.support.design.widget.FloatingActionButton;
 
 public class fragment extends FragmentActivity {
 
@@ -30,33 +32,6 @@ public class fragment extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
-
-        /*
-
-        ActionBar ab = getActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
-
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setSubtitle("Meet UP");
-
-
-        ab.setTitle("Meet UP");
-        ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1da1f2")));
-
-        */
-
-        ActionButton actionButton = (ActionButton) findViewById(R.id.action_button);
-
-        actionButton.moveLeft(100.0f);
-
-        actionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("Add", "new task can be added from here");
-
-            }
-        });
-
-        //actionButton.moveRight(1000.0f);
 
 
         ViewPager   vp = (ViewPager)findViewById(R.id.view_pager);
@@ -69,6 +44,17 @@ public class fragment extends FragmentActivity {
         pagerAdapter    pageAdapter = new pagerAdapter(fm);
 
         vp.setAdapter(pageAdapter);
+
+        FloatingActionButton actionButton = (FloatingActionButton)findViewById(R.id.action_button);
+
+        actionButton.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent intent = new Intent(getApplicationContext(), newEventPlanner.class);
+                                                startActivity(intent);
+
+                                            }
+        });
 
         tl.setupWithViewPager(vp);
         vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl));
