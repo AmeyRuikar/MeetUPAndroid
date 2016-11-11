@@ -1,5 +1,6 @@
 package meetup.amey.com.meetup;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,6 +69,17 @@ public class newEventPlanner extends AppCompatActivity {
                                 //.setIndicatorColor(Color.parseColor("#990000"))
                         .build()
                         .show();
+            }
+        });
+
+        final Button btn_signup = (Button) findViewById(R.id.btn_signup);
+
+        btn_signup.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(intent);
             }
         });
 

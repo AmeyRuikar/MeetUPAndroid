@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myCardsList"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/maps_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:clickable="false"
+        android:src="@drawable/ic_maps"
+
+        android:focusable="false"
+        android:visibility="invisible"
+        app:backgroundTint="#000000"
+        app:rippleColor="@color/com_facebook_blue"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@+id/myCardsList"
+        app:layout_anchorGravity="top|right"/>
+
+</android.support.design.widget.CoordinatorLayout>

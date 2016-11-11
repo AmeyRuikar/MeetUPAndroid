@@ -4,6 +4,7 @@ package meetup.amey.com.meetup;
  * Created by ameyruikar on 10/22/16.
  */
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
     @InjectView(R.id.input_name) EditText _nameText;
-    @InjectView(R.id.input_email) EditText _emailText;
+    @InjectView(R.id.input_username) EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.btn_signup) Button _signupButton;
     @InjectView(R.id.link_login) TextView _loginLink;
@@ -131,8 +132,13 @@ public class SignupActivity extends AppCompatActivity {
 
     public void onSignupSuccess() {
         _signupButton.setEnabled(true);
-        setResult(RESULT_OK, null);
-        finish();
+        //setResult(RESULT_OK, null);
+        //finish();
+
+        Intent intent = new Intent(getApplicationContext(), fragment.class);
+        startActivity(intent);
+
+
     }
 
     public void onSignupFailed() {
@@ -155,8 +161,8 @@ public class SignupActivity extends AppCompatActivity {
             _nameText.setError(null);
         }
 
-        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+        if (email.isEmpty() || email.length() < 3) {
+            _emailText.setError("at least 3 characters");
             valid = false;
         } else {
             _emailText.setError(null);

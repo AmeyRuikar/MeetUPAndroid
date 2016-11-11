@@ -52,6 +52,9 @@ public class loginActivity extends AppCompatActivity {
     @InjectView(R.id.btn_login) Button _loginButton;
     @InjectView(R.id.link_signup) TextView _signupLink;
 
+    LoginButton loginButton;
+    CallbackManager callbackManager;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,102 +76,93 @@ public class loginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the Signup activity
 
-                //facebook integration
-                try {
-                    PackageInfo info = getPackageManager().getPackageInfo(
-                            "com.example.vedant.facebooklogin",
-                            PackageManager.GET_SIGNATURES);
-                    for (Signature signature : info.signatures) {
-                        MessageDigest md = MessageDigest.getInstance("SHA");
-                        md.update(signature.toByteArray());
-                        Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-                    }
-                } catch (PackageManager.NameNotFoundException e) {
 
-                } catch (NoSuchAlgorithmException e) {
-
-                }
-
-                LoginButton loginButton;
-                CallbackManager callbackManager;
-
-                loginButton = (LoginButton) findViewById(R.id.login_button);
-                loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
-                callbackManager = CallbackManager.Factory.create();
-
-                loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-
-                        //meetup.setVisibility(View.INVISIBLE);
-                        GraphRequest request = GraphRequest.newMeRequest(
-                                loginResult.getAccessToken(),
-                                new GraphRequest.GraphJSONObjectCallback() {
-                                    @Override
-                                    public void onCompleted(JSONObject object, GraphResponse response) {
+            }
+        });
 
 
-                                        try {
-                                            String email = object.getString("email");
-                                            String birthday = object.getString("birthday");
-                                            String id = object.getString("id");
-                                            String name = object.getString("name");
-                                           // tv_profile_name.setText(name);
+
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
+        callbackManager = CallbackManager.Factory.create();
+
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+                Log.i("Success", "logged in already");
+                Toast.makeText(getApplicationContext(), "Logged IN", Toast.LENGTH_LONG).show();
 
 
-                                            String imageurl = "https://graph.facebook.com/" + id + "/picture?type=large";
-
-                                            //Picasso.with(MainActivity.this).load(imageurl).into(iv_profile_pic);
-                                            //iv_profile_pic.setVisibility(View.VISIBLE);
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
-
-                                    }
-                                });
-
-
-                        Bundle parameters = new Bundle();
-                        parameters.putString("fields", "id,name,email,gender, birthday");
-                        request.setParameters(parameters);
-                        request.executeAsync();
-
-
-                        /**
-                         * AccessTokenTracker to manage logout
-                         */
-                        AccessTokenTracker accessTokenTracker;
-                        accessTokenTracker = new AccessTokenTracker() {
+                //meetup.setVisibility(View.INVISIBLE);
+                GraphRequest request = GraphRequest.newMeRequest(
+                        loginResult.getAccessToken(),
+                        new GraphRequest.GraphJSONObjectCallback() {
                             @Override
-                            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken,
-                                                                       AccessToken currentAccessToken) {
-                                if (currentAccessToken == null) {
-                                    //tv_profile_name.setText("");
-                                    //iv_profile_pic.setImageResource(R.drawable.maleicon);
+                            public void onCompleted(JSONObject object, GraphResponse response) {
+
+
+                                try {
+                                    String email = object.getString("email");
+                                    String birthday = object.getString("birthday");
+                                    String id = object.getString("id");
+                                    String name = object.getString("name");
+                                    // tv_profile_name.setText(name);
+
+
+                                    String imageurl = "https://graph.facebook.com/" + id + "/picture?type=large";
+
+                                    //Picasso.with(MainActivity.this).load(imageurl).into(iv_profile_pic);
+                                    //iv_profile_pic.setVisibility(View.VISIBLE);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
                                 }
+
                             }
-                        };
-                    }
+                        });
 
+
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email,gender, birthday");
+                request.setParameters(parameters);
+                request.executeAsync();
+
+
+                /**
+                 * AccessTokenTracker to manage logout
+                 */
+                AccessTokenTracker accessTokenTracker;
+                accessTokenTracker = new AccessTokenTracker() {
                     @Override
-                    public void onCancel() {
-
-                        Log.d(TAG, "cancelled");
+                    protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken,
+                                                               AccessToken currentAccessToken) {
+                        if (currentAccessToken == null) {
+                            //tv_profile_name.setText("");
+                            //iv_profile_pic.setImageResource(R.drawable.maleicon);
+                        }
                     }
-
-                    @Override
-                    public void onError(FacebookException error) {
-
-                        Log.d(TAG, error.toString());
-
-                    }
-                });
+                };
 
                 //eof FB integration
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onCancel() {
+
+                Log.d(TAG, "cancelled");
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+                Log.d(TAG, error.toString());
+
             }
         });
+
+
     }
 
     public void login() {
@@ -181,11 +175,18 @@ public class loginActivity extends AppCompatActivity {
 
         _loginButton.setEnabled(false);
 
+
+
+        /*
         final ProgressDialog progressDialog = new ProgressDialog(loginActivity.this,
                 R.style.AppTheme);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
+        */
+        final ProgressDialog progress = new  ProgressDialog(getApplicationContext(), R.style.AppTheme);
+        progress.show(this, null,
+                "Authenticating...", true);
 
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
@@ -198,7 +199,7 @@ public class loginActivity extends AppCompatActivity {
                         // On complete call either onLoginSuccess or onLoginFailed
                         onLoginSuccess();
                         // onLoginFailed();
-                        progressDialog.dismiss();
+                        progress.dismiss();
                     }
                 }, 3000);
     }
@@ -214,6 +215,9 @@ public class loginActivity extends AppCompatActivity {
                 this.finish();
             }
         }
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+
     }
 
     @Override
@@ -225,6 +229,9 @@ public class loginActivity extends AppCompatActivity {
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
         //finish();
+        Intent intent = new Intent(getApplicationContext(), fragment.class);
+        startActivity(intent);
+
     }
 
     public void onLoginFailed() {

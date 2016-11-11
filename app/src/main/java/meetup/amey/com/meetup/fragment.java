@@ -25,6 +25,7 @@ import android.view.View;
 import android.widget.Toast;
 import com.scalified.fab.ActionButton;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 
 public class fragment extends FragmentActivity {
 
@@ -59,6 +60,7 @@ public class fragment extends FragmentActivity {
         tl.setupWithViewPager(vp);
         vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl));
         tl.setTabsFromPagerAdapter(pageAdapter);
+
 
 
     }

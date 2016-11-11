@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -51,6 +52,8 @@ public class upComingEvents extends Fragment {
 
 
         //new loadCurrentTab(v, m, width).execute();
+
+            Snackbar.make(v, "Advertisement, Try coffee @ philzz", Snackbar.LENGTH_LONG).show();
 
 
 

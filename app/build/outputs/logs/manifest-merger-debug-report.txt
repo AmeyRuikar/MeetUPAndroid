@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:2:1-80:12
 	xmlns:android
 		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -13,57 +13,486 @@ ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidMa
 	android:versionCode
 		INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.8.0/AndroidManifest.xml:19:5-67
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-wallet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-nearby:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/AndroidManifest.xml:19:5-79
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:7:5-81
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:22:5-80
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:22:5-80
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:22:5-80
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:22:5-80
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:8:5-98
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:8:22-95
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:14:22-76
 application
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:5:5-23:19
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.0.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/design/23.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:16:5-78:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.0.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.0.0/AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.wdullaer:materialdatetimepicker:2.5.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.wdullaer/materialdatetimepicker/2.5.0/AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appinvite:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.8.0/AndroidManifest.xml:20:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appstate:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:mediarouter-v7:22.2.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fitness:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:28:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:28:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:28:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-nearby:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/AndroidManifest.xml:20:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-panorama:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/7.8.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:28:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.8.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.github.gabrielemariotti.cards:cardslib-core:2.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.1.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.github.gabrielemariotti.cards:cardslib-cards:2.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-cards/2.1.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.github.gabrielemariotti.cards:cardslib-core:2.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.1.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0-alpha1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:19:9-41
 	android:allowBackup
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:17:9-35
 	android:icon
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:18:9-43
 	android:theme
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:9:9-40
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:20:9-53
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:21:9-23:55
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:22:13-58
+	android:value
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:23:13-52
 activity#meetup.amey.com.meetup.MainActivity
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:10:9-18:20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:25:9-28:20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:12:13-45
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:27:13-45
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:11:13-41
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:26:13-41
+activity#meetup.amey.com.meetup.loginActivity
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:29:9-37:20
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:31:13-49
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:30:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:16:27-74
-activity#meetup.amey.com.meetup.fragment
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:19:9-22:20
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:35:27-74
+activity#meetup.amey.com.meetup.SignupActivity
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:38:9-42:20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:21:13-60
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:40:13-43
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:41:13-54
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:20:13-37
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:39:13-43
+activity#meetup.amey.com.meetup.fragment
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:43:9-47:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:45:13-60
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:46:13-54
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:44:13-37
+activity#com.facebook.FacebookActivity
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:48:9-52:75
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:51:13-45
+	android:configChanges
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:50:13-96
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:49:13-57
+activity#meetup.amey.com.meetup.newEventPlanner
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:53:9-57:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:55:13-69
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:56:13-52
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:54:13-44
+activity#meetup.amey.com.meetup.MapsActivity
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:58:9-62:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:60:13-56
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:61:13-52
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:59:13-41
+meta-data#com.google.android.gms.version
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:64:9-66:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:65:13-58
+	android:value
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:66:13-66
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:67:9-69:55
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:68:13-62
+	android:value
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:69:13-52
+activity#meetup.amey.com.meetup.eventsMap
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:71:9-74:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:73:13-62
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:72:13-38
 uses-sdk
 INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.0.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/design/23.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.android:facebook-android-sdk:4.0.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.0.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.scalified:fab:1.1.3] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.scalified/fab/1.1.3/AndroidManifest.xml:23:5-25:41
+MERGED from [com.scalified:viewmover:1.1.1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.scalified/viewmover/1.1.1/AndroidManifest.xml:23:5-25:41
+MERGED from [com.scalified:uitools:1.1.2] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.scalified/uitools/1.1.2/AndroidManifest.xml:23:5-25:41
+MERGED from [com.wdullaer:materialdatetimepicker:2.5.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.wdullaer/materialdatetimepicker/2.5.0/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.github.jjobes:slideDateTimePicker:1.0.2] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.jjobes/slideDateTimePicker/1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-analytics:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appstate:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-cast:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:mediarouter-v7:22.2.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-drive:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-fitness:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-location:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:27:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-games:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-drive:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-gcm:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-identity:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-location:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:27:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:27:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-nearby:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-panorama:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-plus:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-vision:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/7.8.0/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-wallet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-identity:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:27:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-wearable:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.github.gabrielemariotti.cards:cardslib-core:2.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.1.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.github.gabrielemariotti.cards:cardslib-cards:2.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-cards/2.1.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.github.gabrielemariotti.cards:cardslib-core:2.1.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.1.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0-alpha1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha1/AndroidManifest.xml:23:9-75
+uses-permission#android.permission.VIBRATE
+ADDED from [com.wdullaer:materialdatetimepicker:2.5.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.wdullaer/materialdatetimepicker/2.5.0/AndroidManifest.xml:26:5-66
+	android:name
+		ADDED from [com.wdullaer:materialdatetimepicker:2.5.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.wdullaer/materialdatetimepicker/2.5.0/AndroidManifest.xml:26:22-63
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:26:9-29:64
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:28:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:29:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:27:13-65
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:30:9-31:52
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:31:13-50
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/AndroidManifest.xml:30:19-91
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:23:5-25:33
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:23:5-25:33
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:23:5-25:33
+MERGED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:23:5-25:33
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:25:8-31
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/AndroidManifest.xml:24:8-40
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:2:1-80:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/AndroidManifest.xml:21:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/AndroidManifest.xml:21:22-79
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from [com.google.android.gms:play-services-wallet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/AndroidManifest.xml:21:5-70
+	android:name
+		ADDED from [com.google.android.gms:play-services-wallet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/AndroidManifest.xml:21:22-68
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from [com.google.android.gms:play-services-wallet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/AndroidManifest.xml:22:5-73
+	android:name
+		ADDED from [com.google.android.gms:play-services-wallet:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/AndroidManifest.xml:22:22-71
