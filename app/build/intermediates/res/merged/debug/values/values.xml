@@ -973,6 +973,7 @@
     <string name="title_activity_list_cards">listCards</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_new_event_planner">newEventPlanner</string>
+    <string name="title_activity_propose_event">proposeEvent</string>
     <!-- From: file:/Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>

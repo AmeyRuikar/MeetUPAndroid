@@ -110,7 +110,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         listVIew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(getApplicationContext(), cardFragment.class);
+                //Intent intent = new Intent(getApplicationContext(), cardsFragment.class);
                 //startActivity(intent);
 
                 FragmentManager fm = getSupportFragmentManager();
