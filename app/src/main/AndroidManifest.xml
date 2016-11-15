@@ -29,7 +29,11 @@
         <activity
             android:name=".loginActivity"
             android:theme="@style/AppTheme.Dark" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SignupActivity"
@@ -39,14 +43,7 @@
         <activity
             android:name=".fragment"
             android:label="@string/title_activity_fragment"
-             >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            >
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -78,9 +75,12 @@
         <activity
             android:name=".proposeEvent"
             android:label="@string/title_activity_propose_event"
+            android:theme="@style/AppTheme.DarkAll" >
+        </activity>
+        <activity
+            android:name=".showEventList"
+            android:label="@string/title_activity_show_event_list"
             android:theme="@style/AppTheme.DarkAll">
-
-
         </activity>
     </application>
 

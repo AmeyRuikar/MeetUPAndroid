@@ -13,6 +13,8 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
+            android:title="Meet UP"
+            android:titleTextColor="@color/com_facebook_blue"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"

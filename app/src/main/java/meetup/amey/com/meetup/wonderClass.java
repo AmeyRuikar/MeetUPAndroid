@@ -7,7 +7,7 @@ public class wonderClass {
 
 
     String cardName;
-    int imageResourceId;
+    String imageResourceId;
     int isfav;
     int isturned;
 
@@ -35,11 +35,11 @@ public class wonderClass {
         this.cardName = cardName;
     }
 
-    public int getImageResourceId() {
+    public String getImageResourceId() {
         return imageResourceId;
     }
 
-    public void setImageResourceId(int imageResourceId) {
+    public void setImageResourceId(String imageResourceId) {
         this.imageResourceId = imageResourceId;
     }
 

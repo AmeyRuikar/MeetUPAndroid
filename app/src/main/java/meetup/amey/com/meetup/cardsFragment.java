@@ -4,6 +4,7 @@ package meetup.amey.com.meetup;
  * Created by ameyruikar on 11/10/16.
  */
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,22 +19,52 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.util.ArrayList;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import android.graphics.Bitmap;
+import java.lang.Runnable;
+import android.graphics.BitmapFactory;
+import android.app.Activity;
+import java.net.URL;
+import java.lang.Runnable;
+import java.util.concurrent.ExecutionException;
 
 
 public class cardsFragment extends Fragment {
 
     ArrayList<wonderClass> listitems = new ArrayList<>();
+    Context mContext;
+    Activity showEvents;
     RecyclerView MyRecyclerView;
     String Wonders[] = {"Chichen Itza","Christ the Redeemer","Great Wall of China","Machu Picchu","Petra","Taj Mahal","Colosseum"};
-    int  Images[] = {R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2};
+    //int  Images[] = {R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2};
+    final String Images[] = {
+            "http://s1.ticketm.net/dam/a/be5/29311002-718a-407a-949c-7e9a4339cbe5_29181_EVENT_DETAIL_PAGE_16_9.jpg",
+            "http://s1.ticketm.net/dam/c/25d/09139288-a226-487d-a98d-6136663e325d_106551_CUSTOM.jpg",
+            "http://s1.ticketm.net/dam/c/25d/09139288-a226-487d-a98d-6136663e325d_106551_CUSTOM.jpg",
+            "http://s1.ticketm.net/dam/c/ab4/6367448e-7474-4650-bd2d-02a8f7166ab4_106161_RECOMENDATION_16_9.jpg",
+            "http://s1.ticketm.net/dam/c/ab4/6367448e-7474-4650-bd2d-02a8f7166ab4_106161_RECOMENDATION_16_9.jpg",
+            "http://s1.ticketm.net/dam/a/f4a/10c1e9aa-5c55-4654-afb5-a2b15dfe0f4a_107841_ARTIST_PAGE_3_2.jpg",
+            "http://s1.ticketm.net/dam/c/ab4/6367448e-7474-4650-bd2d-02a8f7166ab4_106161_RECOMENDATION_16_9.jpg"
+    };
+
+    public cardsFragment(){
+
+    }
+    public cardsFragment(Context applicationContext, Activity a) {
+        mContext = applicationContext;
+        showEvents = a;
+    }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initializeList();
-        getActivity().setTitle("7 Wonders of the Modern World");
+
+        //getActivity().setTitle("7 Wonders of the Modern World");
     }
 
     @Override
@@ -76,12 +107,61 @@ public class cardsFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(final MyViewHolder holder, int position) {
+        public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
             holder.titleTextView.setText(list.get(position).getCardName());
-            holder.coverImageView.setImageResource(list.get(position).getImageResourceId());
-            holder.coverImageView.setTag(list.get(position).getImageResourceId());
-            holder.likeImageView.setTag(R.drawable.ic_maps);
+
+
+            /*
+            Thread thread = new Thread(new Runnable(URL curUrl) {
+                @Override
+                public void run(URL thisurl) {
+
+                    try {
+
+                        URL url = new URL(Images[position]);
+                        Bitmap bmp = null;
+                        bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                        holder.coverImageView.setImageBitmap(bmp);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            });
+            */
+
+            //thread.start();
+
+
+            /*
+            showEvents.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+                    try {
+
+                        URL url = new URL(Images[position]);
+                        Bitmap bmp = null;
+                        bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                        holder.coverImageView.setImageBitmap(bmp);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+            });
+
+            */
+
+
+           // holder.coverImageView.setImageResource(list.get(position).getImageResourceId());
+            //holder.coverImageView.setTag(list.get(position).getImageResourceId());
+            holder.likeImageView.setTag(R.drawable.ic_dots_black);
+
 
         }
 
@@ -98,30 +178,32 @@ public class cardsFragment extends Fragment {
         public ImageView likeImageView;
         public ImageView shareImageView;
 
+
         public MyViewHolder(View v) {
             super(v);
             titleTextView = (TextView) v.findViewById(R.id.titleTextView);
             coverImageView = (ImageView) v.findViewById(R.id.coverImageView);
             likeImageView = (ImageView) v.findViewById(R.id.likeImageView);
             shareImageView = (ImageView) v.findViewById(R.id.shareImageView);
+
             likeImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
 
-                    int id = (int)likeImageView.getTag();
-                    if( id == R.drawable.ic_maps){
+                    int id = (int) likeImageView.getTag();
+                    if (id == R.drawable.ic_maps) {
 
                         likeImageView.setTag(R.drawable.ic_maps);
                         likeImageView.setImageResource(R.drawable.ic_maps);
 
-                        Toast.makeText(getActivity(),titleTextView.getText()+" added to favourites",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), titleTextView.getText() + " added to favourites", Toast.LENGTH_SHORT).show();
 
-                    }else{
+                    } else {
 
                         likeImageView.setTag(R.drawable.ic_maps);
                         likeImageView.setImageResource(R.drawable.ic_maps);
-                        Toast.makeText(getActivity(),titleTextView.getText()+" removed from favourites",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), titleTextView.getText() + " removed from favourites", Toast.LENGTH_SHORT).show();
 
 
                     }
@@ -135,6 +217,8 @@ public class cardsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
 
+                    /*
+
                     Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
                             "://" + getResources().getResourcePackageName(coverImageView.getId())
                             + '/' + "drawable" + '/' + getResources().getResourceEntryName((int)coverImageView.getTag()));
@@ -146,6 +230,9 @@ public class cardsFragment extends Fragment {
                     shareIntent.setType("image/jpeg");
                     //startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
 
+                    */
+
+                    Toast.makeText(getActivity(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
 
 
                 }
@@ -167,6 +254,7 @@ public class cardsFragment extends Fragment {
             item.setImageResourceId(Images[i]);
             item.setIsfav(0);
             item.setIsturned(0);
+
             listitems.add(item);
 
         }

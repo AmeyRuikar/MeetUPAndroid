@@ -22,11 +22,15 @@ import butterknife.InjectView;
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
-    @InjectView(R.id.input_name) EditText _nameText;
+    @InjectView(R.id.input_name_fb) EditText _nameText;
     @InjectView(R.id.input_username) EditText _emailText;
     @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.btn_signup) Button _signupButton;
     @InjectView(R.id.link_login) TextView _loginLink;
+
+
+    String fbID;
+    String fbName;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,16 @@ public class SignupActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        fbID = (String) getIntent().getExtras().get("fbID");
+        fbName = (String) getIntent().getExtras().get("name");
+
+        Log.i("intent", "Name received: "+fbName);
+
+        EditText editBox = (EditText) findViewById(R.id.input_name_fb);
+        editBox.setText(fbName);
+        editBox.setEnabled(false);
+
 
         //pills for interests
         TextView pill1 = (TextView) findViewById(R.id.pill1);
@@ -135,6 +149,9 @@ public class SignupActivity extends AppCompatActivity {
         //setResult(RESULT_OK, null);
         //finish();
 
+        //create new db entry- user
+
+
         Intent intent = new Intent(getApplicationContext(), fragment.class);
         startActivity(intent);
 
@@ -168,12 +185,15 @@ public class SignupActivity extends AppCompatActivity {
             _emailText.setError(null);
         }
 
+        /*
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
             _passwordText.setError("between 4 and 10 alphanumeric characters");
             valid = false;
         } else {
             _passwordText.setError(null);
         }
+
+        */
 
         return valid;
     }

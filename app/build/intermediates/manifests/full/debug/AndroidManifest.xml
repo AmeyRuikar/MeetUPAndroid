@@ -45,6 +45,11 @@
         <activity
             android:name="meetup.amey.com.meetup.loginActivity"
             android:theme="@style/AppTheme.Dark" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="meetup.amey.com.meetup.SignupActivity"
@@ -54,11 +59,6 @@
         <activity
             android:name="meetup.amey.com.meetup.fragment"
             android:label="@string/title_activity_fragment" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -90,6 +90,11 @@
         <activity
             android:name="meetup.amey.com.meetup.proposeEvent"
             android:label="@string/title_activity_propose_event"
+            android:theme="@style/AppTheme.DarkAll" >
+        </activity>
+        <activity
+            android:name="meetup.amey.com.meetup.showEventList"
+            android:label="@string/title_activity_show_event_list"
             android:theme="@style/AppTheme.DarkAll" >
         </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->

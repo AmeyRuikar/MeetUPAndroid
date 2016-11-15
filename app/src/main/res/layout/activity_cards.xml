@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:clickable="false"
-        android:src="@drawable/ic_maps"
+        android:src="@drawable/ic_dots_black"
 
         android:focusable="false"
         android:visibility="invisible"

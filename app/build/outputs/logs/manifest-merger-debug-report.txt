@@ -208,63 +208,63 @@ ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidMa
 	android:name
 		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:26:13-41
 activity#meetup.amey.com.meetup.loginActivity
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:29:9-33:20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:29:9-37:20
 	android:theme
 		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:31:13-49
 	android:name
 		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:30:13-42
-activity#meetup.amey.com.meetup.SignupActivity
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:34:9-38:20
-	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:36:13-43
-	android:theme
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:37:13-54
-	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:35:13-43
-activity#meetup.amey.com.meetup.fragment
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:39:9-50:20
-	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:41:13-60
-	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:40:13-37
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:44:13-48:29
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:45:17-69
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:45:25-66
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:47:17-77
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:47:27-74
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:35:27-74
+activity#meetup.amey.com.meetup.SignupActivity
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:38:9-42:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:40:13-43
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:41:13-54
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:39:13-43
+activity#meetup.amey.com.meetup.fragment
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:43:9-47:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:45:13-60
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:44:13-37
 activity#com.facebook.FacebookActivity
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:51:9-55:75
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:48:9-52:75
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:54:13-45
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:51:13-45
 	android:configChanges
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:53:13-96
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:50:13-96
 	android:theme
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:55:13-72
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:52:13-72
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:52:13-57
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:49:13-57
 activity#meetup.amey.com.meetup.newEventPlanner
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:56:9-60:20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:53:9-57:20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:58:13-69
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:55:13-69
 	android:theme
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:59:13-52
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:56:13-52
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:57:13-44
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:54:13-44
 activity#meetup.amey.com.meetup.MapsActivity
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:61:9-65:20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:58:9-62:20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:63:13-56
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:60:13-56
 	android:theme
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:64:13-52
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:61:13-52
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:62:13-41
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:59:13-41
 meta-data#com.google.android.gms.version
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:67:9-69:69
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:64:9-66:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
@@ -295,29 +295,37 @@ MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/
 MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:68:13-58
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:65:13-58
 	android:value
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:69:13-66
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:66:13-66
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:70:9-72:55
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:67:9-69:55
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:71:13-62
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:68:13-62
 	android:value
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:72:13-52
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:69:13-52
 activity#meetup.amey.com.meetup.eventsMap
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:74:9-77:20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:71:9-74:20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:76:13-62
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:73:13-62
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:75:13-38
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:72:13-38
 activity#meetup.amey.com.meetup.proposeEvent
-ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:78:9-84:20
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:75:9-79:20
 	android:label
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:80:13-65
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:77:13-65
 	android:theme
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:81:13-52
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:78:13-52
 	android:name
-		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:79:13-41
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:76:13-41
+activity#meetup.amey.com.meetup.showEventList
+ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:80:9-84:20
+	android:label
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:82:13-67
+	android:theme
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:83:13-52
+	android:name
+		ADDED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml:81:13-42
 uses-sdk
 INJECTED from /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:support-v4:24.0.0-alpha1] /Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/AndroidManifest.xml:20:5-43

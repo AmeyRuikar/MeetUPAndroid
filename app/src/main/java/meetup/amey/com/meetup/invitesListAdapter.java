@@ -27,7 +27,7 @@ public class invitesListAdapter extends ArrayAdapter<invitesListElement> {
         this.mContext = context;
         this.localCopy = objects;
 
-        Log.i("array","len " + this.localCopy.size());
+        //Log.i("array","len " + this.localCopy.size());
 
     }
 

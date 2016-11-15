@@ -20,9 +20,9 @@
 
             <ListView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="489dp"
                 android:layout_margin="10dp"
-                android:id="@+id/historyList">
+                android:id="@+id/pendingList">
             </ListView>
 
 

@@ -55,9 +55,26 @@ public class loginActivity extends AppCompatActivity {
     LoginButton loginButton;
     CallbackManager callbackManager;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+           /*try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "meetup.amey.com.meetup",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                Log.i("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }*/
+
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
         ButterKnife.inject(this);
@@ -81,7 +98,6 @@ public class loginActivity extends AppCompatActivity {
         });
 
 
-
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
         callbackManager = CallbackManager.Factory.create();
@@ -93,8 +109,11 @@ public class loginActivity extends AppCompatActivity {
                 Log.i("Success", "logged in already");
                 Toast.makeText(getApplicationContext(), "Logged IN", Toast.LENGTH_LONG).show();
 
+                final String[] info = new String[2];
 
-                //meetup.setVisibility(View.INVISIBLE);
+
+
+
                 GraphRequest request = GraphRequest.newMeRequest(
                         loginResult.getAccessToken(),
                         new GraphRequest.GraphJSONObjectCallback() {
@@ -105,12 +124,44 @@ public class loginActivity extends AppCompatActivity {
                                 try {
                                     String email = object.getString("email");
                                     String birthday = object.getString("birthday");
-                                    String id = object.getString("id");
+                                    String facebbok_id = object.getString("id");
                                     String name = object.getString("name");
                                     // tv_profile_name.setText(name);
 
 
-                                    String imageurl = "https://graph.facebook.com/" + id + "/picture?type=large";
+
+                                    String imageurl = "https://graph.facebook.com/" + facebbok_id + "/picture?type=large";
+
+                                    Log.i("facebook_id", facebbok_id);
+                                    Log.i("email", email);
+                                    Log.i("name", name);
+                                    Log.i("birthday", birthday);
+
+
+                                    // Creating the JSON object for the logged in user
+                                    JSONObject user = new JSONObject();
+                                    try {
+                                        user.put("facebook_id", facebbok_id);
+                                        user.put("name", name);
+                                        user.put("email", email);
+                                        user.put("birthday", birthday);
+
+
+                                    } catch (JSONException e) {
+                                        // TODO Auto-generated catch block
+                                        e.printStackTrace();
+                                    }
+
+                                    // Prining JSON object for testing
+                                    Log.i("JSON_USER_REP", user.toString());
+
+
+                                    Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                                    intent.putExtra("fbID", facebbok_id);
+
+                                    Log.i("intent", "Name sent: " + name);
+                                    intent.putExtra("name", name);
+                                    startActivity(intent);
 
                                     //Picasso.with(MainActivity.this).load(imageurl).into(iv_profile_pic);
                                     //iv_profile_pic.setVisibility(View.VISIBLE);
@@ -143,9 +194,6 @@ public class loginActivity extends AppCompatActivity {
                     }
                 };
 
-                //eof FB integration
-                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                startActivity(intent);
             }
 
             @Override
@@ -162,7 +210,8 @@ public class loginActivity extends AppCompatActivity {
             }
         });
 
-
+        //eof FB integration
+        //
     }
 
     public void login() {

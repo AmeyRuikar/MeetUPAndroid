@@ -17,6 +17,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.util.*;
@@ -26,20 +27,35 @@ import android.widget.Toast;
 import com.scalified.fab.ActionButton;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.Toolbar;
 
-public class fragment extends FragmentActivity {
+import static android.app.PendingIntent.getActivity;
+
+public class fragment extends FragmentActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
+/*
+        Toolbar tb = (Toolbar) findViewById(R.id.toolbar);
+        tb.setTitle("Meet UP");
+        ((SupportActionBar) getApplicationContext()).setSupportActionBar(tb);
+
+
+*/
+
+
+        //setTitle("7 Wonders of the Modern World");
 
         ViewPager   vp = (ViewPager)findViewById(R.id.view_pager);
 
         TabLayout   tl = (TabLayout) findViewById(R.id.tab_layout);
 
         FragmentManager fm = getSupportFragmentManager();
+
+
 
 
         pagerAdapter    pageAdapter = new pagerAdapter(fm);

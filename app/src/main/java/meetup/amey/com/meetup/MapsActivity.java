@@ -36,6 +36,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.*;
 import android.location.*;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import android.app.Fragment;
@@ -113,17 +114,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 //Intent intent = new Intent(getApplicationContext(), cardsFragment.class);
                 //startActivity(intent);
 
-                FragmentManager fm = getSupportFragmentManager();
-                android.support.v4.app.Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
-
-                if (fragment == null) {
-                    fragment = new cardsFragment();
-
-                    fm.beginTransaction()
-                            .add(R.id.fragmentContainer, fragment)
-                            .commit();
-                }
-
+                Intent intent = new Intent(getApplicationContext(), showEventList.class);
+                startActivity(intent);
             }
         });
 

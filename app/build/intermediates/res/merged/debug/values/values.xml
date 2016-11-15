@@ -894,7 +894,7 @@
     <string name="decline">Decline</string>
     <!-- From: file:/Users/ameyruikar/AndroidStudioProjects/MeetUP/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="facebook_app_id">361321810880453</string>
+    <string name="facebook_app_id">283651488696125</string>
     <!-- From: file:/Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="font_fontFamily_medium">sans-serif</string>
@@ -974,6 +974,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_new_event_planner">newEventPlanner</string>
     <string name="title_activity_propose_event">proposeEvent</string>
+    <string name="title_activity_show_event_list">showEventList</string>
     <!-- From: file:/Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>

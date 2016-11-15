@@ -24,7 +24,7 @@ public class pagerAdapter extends FragmentStatePagerAdapter {
         Fragment f = null;
 
         if(position == 0){
-            f = new upComingEvents();
+            f = new pendingEvents();
         }
         else if(position == 1){
             f = new upComingEvents();
