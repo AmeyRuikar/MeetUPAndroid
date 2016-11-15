@@ -3,9 +3,12 @@ package meetup.amey.com.meetup;
 /**
  * Created by ameyruikar on 11/10/16.
  */
+import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +16,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +33,7 @@ import android.graphics.BitmapFactory;
 import android.app.Activity;
 import java.net.URL;
 import java.lang.Runnable;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 
@@ -41,13 +46,13 @@ public class cardsFragment extends Fragment {
     String Wonders[] = {"Chichen Itza","Christ the Redeemer","Great Wall of China","Machu Picchu","Petra","Taj Mahal","Colosseum"};
     //int  Images[] = {R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2};
     final String Images[] = {
-            "http://s1.ticketm.net/dam/a/be5/29311002-718a-407a-949c-7e9a4339cbe5_29181_EVENT_DETAIL_PAGE_16_9.jpg",
-            "http://s1.ticketm.net/dam/c/25d/09139288-a226-487d-a98d-6136663e325d_106551_CUSTOM.jpg",
-            "http://s1.ticketm.net/dam/c/25d/09139288-a226-487d-a98d-6136663e325d_106551_CUSTOM.jpg",
-            "http://s1.ticketm.net/dam/c/ab4/6367448e-7474-4650-bd2d-02a8f7166ab4_106161_RECOMENDATION_16_9.jpg",
-            "http://s1.ticketm.net/dam/c/ab4/6367448e-7474-4650-bd2d-02a8f7166ab4_106161_RECOMENDATION_16_9.jpg",
-            "http://s1.ticketm.net/dam/a/f4a/10c1e9aa-5c55-4654-afb5-a2b15dfe0f4a_107841_ARTIST_PAGE_3_2.jpg",
-            "http://s1.ticketm.net/dam/c/ab4/6367448e-7474-4650-bd2d-02a8f7166ab4_106161_RECOMENDATION_16_9.jpg"
+            "https://s3-media3.fl.yelpcdn.com/bphoto/sZ17Va53NSYwlbaEroL6eQ/ms.jpg",
+            "https://s3-media4.fl.yelpcdn.com/bphoto/19WlSmfgfnqx6sewSMHtDw/ms.jpg",
+            "https://s3-media4.fl.yelpcdn.com/bphoto/_spGtwkh-w0_6hub8siWVw/ms.jpg",
+            "https://s3-media4.fl.yelpcdn.com/bphoto/6qmiXfiPFQpOqP84tS3Z-w/ms.jpg",
+            "https://s3-media1.fl.yelpcdn.com/bphoto/3OQIShgHyPFjCM2ZKPh16w/ms.jpg",
+            "https://s3-media2.fl.yelpcdn.com/bphoto/jldZ61576iBdP9_Sr2-z0g/ms.jpg",
+            "https://s3-media3.fl.yelpcdn.com/bphoto/MXc4ricdumSS6yiLYPQyvg/ms.jpg"
     };
 
     public cardsFragment(){
@@ -112,55 +117,9 @@ public class cardsFragment extends Fragment {
             holder.titleTextView.setText(list.get(position).getCardName());
 
 
-            /*
-            Thread thread = new Thread(new Runnable(URL curUrl) {
-                @Override
-                public void run(URL thisurl) {
-
-                    try {
-
-                        URL url = new URL(Images[position]);
-                        Bitmap bmp = null;
-                        bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                        holder.coverImageView.setImageBitmap(bmp);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            });
-            */
-
-            //thread.start();
-
-
-            /*
-            showEvents.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-
-                    try {
-
-                        URL url = new URL(Images[position]);
-                        Bitmap bmp = null;
-                        bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                        holder.coverImageView.setImageBitmap(bmp);
-
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-
-                }
-            });
-
-            */
-
-
-           // holder.coverImageView.setImageResource(list.get(position).getImageResourceId());
-            //holder.coverImageView.setTag(list.get(position).getImageResourceId());
             holder.likeImageView.setTag(R.drawable.ic_dots_black);
+
+            new imageDownloader(holder.coverImageView).execute(Images[position]);
 
 
         }
@@ -217,22 +176,43 @@ public class cardsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
 
-                    /*
 
-                    Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
-                            "://" + getResources().getResourcePackageName(coverImageView.getId())
-                            + '/' + "drawable" + '/' + getResources().getResourceEntryName((int)coverImageView.getTag()));
-
-
-                    Intent shareIntent = new Intent();
-                    shareIntent.setAction(Intent.ACTION_SEND);
-                    shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
-                    shareIntent.setType("image/jpeg");
-                    //startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
-
-                    */
 
                     Toast.makeText(getActivity(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(showEvents);
+                    builder.setTitle("Create this Event at " + titleTextView.getText());
+                    builder.setMessage("Share with others?");
+
+
+                    builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            //Toast.makeText(getActivity(), titleTextView.getText() + " just make the fragemnt now", Toast.LENGTH_SHORT).show();
+
+                            //later move to async task on post execute
+                            Intent i = new Intent(showEvents, fragment.class);
+                            // set the new task and clear flags
+                            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            dialog.dismiss();
+                            startActivity(i);
+
+                        }
+                    });
+
+
+                    builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            dialog.dismiss();
+
+                        }
+                    });
+
+                    AlertDialog alert = builder.create();
+                    alert.show();
 
 
                 }
