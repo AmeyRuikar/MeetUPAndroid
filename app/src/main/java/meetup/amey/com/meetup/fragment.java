@@ -58,7 +58,7 @@ public class fragment extends FragmentActivity  {
 
 
 
-        pagerAdapter    pageAdapter = new pagerAdapter(fm);
+        pagerAdapter    pageAdapter = new pagerAdapter(fm, this);
 
         vp.setAdapter(pageAdapter);
 

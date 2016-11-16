@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import android.graphics.*;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class proposeEvent extends AppCompatActivity {
 
@@ -20,6 +21,11 @@ public class proposeEvent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_propose_event);
+
+        String eventName = (String) getIntent().getExtras().get("eventName");
+        String dateTime = (String) getIntent().getExtras().get("dateTime");
+        String people = (String) getIntent().getExtras().get("people");
+        String location = (String) getIntent().getExtras().get("location");
 
 
         Thread thread = new Thread(new Runnable() {
@@ -40,6 +46,20 @@ public class proposeEvent extends AppCompatActivity {
         });
 
         thread.start();
+
+
+        TextView eN = (TextView) findViewById(R.id.eventName);
+        TextView creator = (TextView) findViewById(R.id.organiser);
+        TextView startTime = (TextView) findViewById(R.id.dtStart);
+        TextView endTime = (TextView) findViewById(R.id.dtEnd);
+        TextView latlong = (TextView) findViewById(R.id.location);
+
+        eN.setText(eventName);
+        //creator.setText()
+        startTime.setText(dateTime);
+        endTime.setText(dateTime);
+        latlong.setText(location);
+
 
 
 

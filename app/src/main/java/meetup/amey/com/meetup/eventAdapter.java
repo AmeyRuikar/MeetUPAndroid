@@ -1,6 +1,7 @@
 package meetup.amey.com.meetup;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,13 @@ public class eventAdapter extends ArrayAdapter<eventObject> {
         dateTime.setText(localCopy.get(position).getDateTime());
         people.setText(localCopy.get(position).getPeople());
         local.setText(localCopy.get(position).getLocation());
+
+        int status = 1;
+
+        if(status == 1){
+            rowV.setAlpha((float) (0.25));
+            rowV.setBackgroundColor(Color.parseColor("#1da1f2"));
+        }
 
         return rowV;
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     >
@@ -142,6 +143,67 @@
 
 
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Down Vote, Up vote or decline invite"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/imgMap"
+                    android:layout_marginTop="30dp"/>
+
+                <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                    android:layout_marginBottom="20dp"
+                >
+
+
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/downVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:clickable="true"
+                    android:src="@drawable/ic_thumb_down_white_24dp"
+                    app:backgroundTint="@color/primary"
+                    app:rippleColor="@color/primary_darker"
+                    app:pressedTranslationZ="12dp"
+                    />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/upVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:clickable="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:src="@drawable/ic_thumb_up_white_24dp"
+                    app:backgroundTint="@color/fab_material_green_500"
+                    app:rippleColor="@color/fab_material_green_900"
+                    app:pressedTranslationZ="12dp"
+                    />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/action_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_gravity="right"
+                    android:clickable="true"
+                    android:src="@drawable/ic_highlight_off_white_24dp"
+                    app:backgroundTint="@color/primary"
+                    app:rippleColor="@color/primary_darker"
+                    app:pressedTranslationZ="12dp"
+                    />
+
+            </LinearLayout>L
+                <!--
+
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/btn_vote"
                     android:layout_width="fill_parent"
@@ -150,6 +212,7 @@
                     android:layout_marginBottom="24dp"
                     android:padding="12dp"
                     android:text="Put out for voting"/>
+                    -->
 
 
             </LinearLayout>
