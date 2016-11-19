@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/io.github.yavski/fab-speed-dial/1.0.6/res/values-v21/values-v21.xml -->
+    <eat-comment/>
+    <dimen name="coordinator_layout_offset">@dimen/keyline_1</dimen>
+    <dimen name="fab_margin">@dimen/keyline_1</dimen>
+    <dimen name="fab_menu_item_margin_top">0dp</dimen>
+    <dimen name="mini_fab_margin_bottom">@dimen/keyline_1_minus_8dp</dimen>
+    <dimen name="mini_fab_margin_left">@dimen/keyline_1_minus_8dp</dimen>
+    <dimen name="mini_fab_margin_right">@dimen/keyline_1_minus_8dp</dimen>
+    <dimen name="mini_fab_margin_top">@dimen/keyline_1_minus_8dp</dimen>
     <!-- From: file:/Users/ameyruikar/AndroidStudioProjects/MeetUP/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-cards/2.1.0/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <item name="topcolored_bg" type="drawable">@null</item>

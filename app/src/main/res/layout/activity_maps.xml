@@ -15,6 +15,7 @@
 
     </fragment>
 
+    <!--
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/list_view"
         android:layout_width="wrap_content"
@@ -30,7 +31,10 @@
         app:pressedTranslationZ="12dp"
         app:layout_anchor="@+id/map"
         app:layout_anchorGravity="top|right"/>
+        -->
 
+
+    <!--
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/back_to_map"
@@ -47,6 +51,23 @@
         app:pressedTranslationZ="12dp"
         app:layout_anchor="@+id/map"
         app:layout_anchorGravity="top|left"/>
+        -->
+
+    <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:id="@+id/mapOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="150dp"
+        app:fabDrawable="@drawable/ic_build_white_24dp"
+        app:fabBackgroundTint="#000000"
+        app:fabGravity="bottom_end"
+        app:fabMenu="@menu/menu_options"
+        app:miniFabBackgroundTint="@android:color/black"
+        app:miniFabDrawableTint="?attr/colorPrimaryDark"
+        app:miniFabTitleBackgroundTint="@android:color/black"
+        app:miniFabTitleTextColor="?attr/colorPrimaryDark" />
+
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_show"

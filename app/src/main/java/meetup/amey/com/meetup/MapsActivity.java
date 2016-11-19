@@ -41,6 +41,10 @@ import android.view.View;
 import android.widget.*;
 import android.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import io.github.yavski.fabspeeddial.FabSpeedDial;
+import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
+
+import android.view.MenuItem;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, OnMapClickListener, OnMapLongClickListener, OnMarkerClickListener {
 
@@ -93,19 +97,46 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         }
 
+
+        FabSpeedDial fabSpeedDial = (FabSpeedDial) findViewById(R.id.mapOptions);
+        fabSpeedDial.setMenuListener(new SimpleMenuListenerAdapter() {
+            @Override
+            public boolean onMenuItemSelected(MenuItem menuItem) {
+                //TODO: Start some activity
+                Log.i("fab", menuItem.toString());
+
+                if(menuItem.getTitle().equals("List View")){
+                    Intent intent = new Intent(getApplicationContext(), showEventList.class);
+                    startActivity(intent);
+                }
+                else if(menuItem.getTitle().equals("Clear All")){
+
+                    //TODO: clear all the points/map
+                }
+
+                return false;
+            }
+        });
+
         seeEvents = (Button) findViewById(R.id.btn_show);
         seeEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 seeEvents.setVisibility(View.INVISIBLE);
+
+                /*
                 FloatingActionButton listVIew = (FloatingActionButton) findViewById(R.id.list_view);
                 listVIew.setVisibility(View.VISIBLE);
                 listVIew = (FloatingActionButton) findViewById(R.id.back_to_map);
                 listVIew.setVisibility(View.VISIBLE);
+                */
+
+
             }
         });
 
 
+        /*
         FloatingActionButton listVIew = (FloatingActionButton) findViewById(R.id.list_view);
 
         listVIew.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +149,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(intent);
             }
         });
+        */
 
 
 
