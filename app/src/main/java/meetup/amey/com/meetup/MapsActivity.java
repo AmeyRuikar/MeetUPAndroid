@@ -1,8 +1,11 @@
 package meetup.amey.com.meetup;
+
 import java.util.ArrayList;
 
 import android.*;
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -35,12 +38,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.*;
+
 import android.location.*;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import android.app.Fragment;
 import android.support.v4.app.FragmentManager;
+
 import io.github.yavski.fabspeeddial.FabSpeedDial;
 import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
 
@@ -50,9 +55,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap googleMap;
     private ArrayList<LatLng> arrayPoints = null;
+    private ArrayList<eventMarkerObject> returnedEvents = new ArrayList<eventMarkerObject>();
     PolylineOptions polylineOptions;
     private boolean checkClick = false;
     Button seeEvents;
+    int flag = 0;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -84,14 +91,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Criteria criteria = new Criteria();
 
         Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
-        if (location != null)
-        {
+        if (location != null) {
             map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
 
             CameraPosition cameraPosition = new CameraPosition.Builder()
                     .target(new LatLng(location.getLatitude(), location.getLongitude()))      // Sets the center of the map to location user
                     .zoom(17)                   // Sets the zoom
-                    .bearing(90)                // Sets the orientation of the camera to east
+                    .bearing(0)                // Sets the orientation of the camera to east
                     .tilt(45)                   // Sets the tilt of the camera to 30 degrees
                     .build();                   // Creates a CameraPosition from the builder
             map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
@@ -102,16 +108,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         fabSpeedDial.setMenuListener(new SimpleMenuListenerAdapter() {
             @Override
             public boolean onMenuItemSelected(MenuItem menuItem) {
-                //TODO: Start some activity
+
                 Log.i("fab", menuItem.toString());
 
-                if(menuItem.getTitle().equals("List View")){
+                if (menuItem.getTitle().equals("List View")) {
+
+                    globals.eventArrayForList = returnedEvents;
+
                     Intent intent = new Intent(getApplicationContext(), showEventList.class);
                     startActivity(intent);
-                }
-                else if(menuItem.getTitle().equals("Clear All")){
+                } else if (menuItem.getTitle().equals("Clear All")) {
 
                     //TODO: clear all the points/map
+
+                    arrayPoints.clear();
+                    googleMap.clear();
+
+
                 }
 
                 return false;
@@ -124,17 +137,70 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View v) {
                 seeEvents.setVisibility(View.INVISIBLE);
 
-                /*
-                FloatingActionButton listVIew = (FloatingActionButton) findViewById(R.id.list_view);
-                listVIew.setVisibility(View.VISIBLE);
-                listVIew = (FloatingActionButton) findViewById(R.id.back_to_map);
-                listVIew.setVisibility(View.VISIBLE);
-                */
+
+                new loadEventMarkers(arrayPoints, googleMap, returnedEvents).execute();
+                flag =1;
+
+
+
+
+                ImageView shareImageView = (ImageView) findViewById(R.id.shareImageView_maps);
+
+                shareImageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                        Toast.makeText(getApplicationContext(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this);
+                        builder.setTitle("Create this Event at ");
+                        builder.setMessage("Share with others?");
+
+
+                        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                //Toast.makeText(getActivity(), titleTextView.getText() + " just make the fragemnt now", Toast.LENGTH_SHORT).show();
+
+                                //later move to async task on post execute
+                                Intent i = new Intent(MapsActivity.this, fragment.class);
+                                // set the new task and clear flags
+                                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                dialog.dismiss();
+                                startActivity(i);
+
+                            }
+                        });
+
+
+                        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                dialog.dismiss();
+
+                            }
+                        });
+
+                        AlertDialog alert = builder.create();
+                        alert.show();
+
+
+                    }
+                });
+
+
+
+
 
 
             }
         });
 
+        RelativeLayout banner = (RelativeLayout) findViewById(R.id.activity_main_relative);
+        banner.setVisibility(View.INVISIBLE);
 
         /*
         FloatingActionButton listVIew = (FloatingActionButton) findViewById(R.id.list_view);
@@ -183,9 +249,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             checkClick = true;
             PolygonOptions polygonOptions = new PolygonOptions();
             polygonOptions.addAll(arrayPoints);
-            polygonOptions.strokeColor(Color.BLUE);
+            polygonOptions.strokeColor(Color.GRAY);
             polygonOptions.strokeWidth(7);
-            polygonOptions.fillColor(Color.CYAN);
+            polygonOptions.fillColor(Color.argb(80, 100, 100, 100));
             Polygon polygon = googleMap.addPolygon(polygonOptions);
 
 
@@ -201,8 +267,44 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         System.out.println("**********All arrayPoints***********" + arrayPoints);
         if (arrayPoints.get(0).equals(marker.getPosition())) {
             System.out.println("********First Point choose************");
+            arrayPoints.add(arrayPoints.get(0));
             countPolygonPoints();
         }
+
+
+
+        if(flag ==1){
+
+            for(int i=0; i< returnedEvents.size(); i++){
+
+                if(returnedEvents.get(i).getPosition().equals(marker.getPosition())){
+
+                    RelativeLayout banner = (RelativeLayout) findViewById(R.id.activity_main_relative);
+                    banner.setVisibility(View.VISIBLE);
+
+                    TextView n = (TextView) findViewById(R.id.nameEventMaps);
+                    n.setText(returnedEvents.get(i).getEventName());
+
+                    TextView n1 = (TextView) findViewById(R.id.genreMap);
+                    if(returnedEvents.get(i).getSubgenre().equals("") || returnedEvents.get(i).getSubgenre().equals("Undefined")){
+                        n1.setText(returnedEvents.get(i).getGenre());
+                    }
+                    else{
+                        n1.setText(returnedEvents.get(i).getGenre() +" - "+returnedEvents.get(i).getSubgenre());
+                    }
+
+
+
+
+                }
+
+            }
+
+        }
+
+
+
+
         return false;
     }
 

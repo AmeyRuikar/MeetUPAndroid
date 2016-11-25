@@ -39,7 +39,7 @@ public class DateTime extends FragmentActivity {
             if(currentBtn != null)
             {
                 currentBtn.setText(mFormatter.format(date));
-                currentBtn.setGravity(Gravity.LEFT);
+                //currentBtn.setGravity(Gravity.LEFT);
             }
 
 

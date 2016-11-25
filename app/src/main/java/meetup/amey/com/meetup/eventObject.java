@@ -11,6 +11,8 @@ public class eventObject {
     String people;
     String location;
 
+
+
     public eventObject(String eventName, String dateTime, String people, String location) {
         this.eventName = eventName;
         this.dateTime = dateTime;

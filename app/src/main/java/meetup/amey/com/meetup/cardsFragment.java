@@ -43,24 +43,28 @@ public class cardsFragment extends Fragment {
     Context mContext;
     Activity showEvents;
     RecyclerView MyRecyclerView;
-    String Wonders[] = {"Chichen Itza","Christ the Redeemer","Great Wall of China","Machu Picchu","Petra","Taj Mahal","Colosseum"};
-    //int  Images[] = {R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2,R.drawable.p2};
-    final String Images[] = {
-            "https://s3-media3.fl.yelpcdn.com/bphoto/sZ17Va53NSYwlbaEroL6eQ/ms.jpg",
-            "https://s3-media4.fl.yelpcdn.com/bphoto/19WlSmfgfnqx6sewSMHtDw/ms.jpg",
-            "https://s3-media4.fl.yelpcdn.com/bphoto/_spGtwkh-w0_6hub8siWVw/ms.jpg",
-            "https://s3-media4.fl.yelpcdn.com/bphoto/6qmiXfiPFQpOqP84tS3Z-w/ms.jpg",
-            "https://s3-media1.fl.yelpcdn.com/bphoto/3OQIShgHyPFjCM2ZKPh16w/ms.jpg",
-            "https://s3-media2.fl.yelpcdn.com/bphoto/jldZ61576iBdP9_Sr2-z0g/ms.jpg",
-            "https://s3-media3.fl.yelpcdn.com/bphoto/MXc4ricdumSS6yiLYPQyvg/ms.jpg"
-    };
+    private ArrayList<eventMarkerObject> listCopy;
+    String Wonders[] = new String[100];
 
-    public cardsFragment(){
+    String Images[] = new String[100];
+    String selectedEvent;
 
-    }
+
     public cardsFragment(Context applicationContext, Activity a) {
         mContext = applicationContext;
         showEvents = a;
+        this.listCopy = globals.eventArrayForList;
+
+
+
+        for(int i = 0; i < listCopy.size(); i++){
+            Wonders[i] = listCopy.get(i).getEventName();
+            Images[i] = listCopy.get(i).getUrl();
+        }
+
+
+
+
     }
 
 
@@ -115,12 +119,8 @@ public class cardsFragment extends Fragment {
         public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
             holder.titleTextView.setText(list.get(position).getCardName());
-
-
             holder.likeImageView.setTag(R.drawable.ic_dots_black);
-
             new imageDownloader(holder.coverImageView).execute(Images[position]);
-
 
         }
 
@@ -156,13 +156,13 @@ public class cardsFragment extends Fragment {
                         likeImageView.setTag(R.drawable.ic_maps);
                         likeImageView.setImageResource(R.drawable.ic_maps);
 
-                        Toast.makeText(getActivity(), titleTextView.getText() + " added to favourites", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getActivity(), titleTextView.getText() + " added to favourites", Toast.LENGTH_SHORT).show();
 
                     } else {
 
                         likeImageView.setTag(R.drawable.ic_maps);
                         likeImageView.setImageResource(R.drawable.ic_maps);
-                        Toast.makeText(getActivity(), titleTextView.getText() + " removed from favourites", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), titleTextView.getText() + " removed from favourites", Toast.LENGTH_SHORT).show();
 
 
                     }
@@ -176,13 +176,18 @@ public class cardsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
 
-
-
                     Toast.makeText(getActivity(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(showEvents);
                     builder.setTitle("Create this Event at " + titleTextView.getText());
                     builder.setMessage("Share with others?");
+
+                    for(int i = 0; i < listCopy.size(); i++){
+                        if(listCopy.get(i).getEventName().equals(titleTextView.getText())){
+                            selectedEvent = listCopy.get(i).getEventid();
+                            break;
+                        }
+                    }
 
 
                     builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
@@ -191,6 +196,8 @@ public class cardsFragment extends Fragment {
 
                             //Toast.makeText(getActivity(), titleTextView.getText() + " just make the fragemnt now", Toast.LENGTH_SHORT).show();
 
+
+                            //new async task
                             //later move to async task on post execute
                             Intent i = new Intent(showEvents, fragment.class);
                             // set the new task and clear flags
@@ -226,7 +233,7 @@ public class cardsFragment extends Fragment {
     public void initializeList() {
         listitems.clear();
 
-        for(int i =0;i<7;i++){
+        for(int i =0;i< listCopy.size();i++){
 
 
             wonderClass item = new wonderClass();

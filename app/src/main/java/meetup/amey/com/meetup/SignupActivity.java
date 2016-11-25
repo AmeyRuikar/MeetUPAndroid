@@ -140,7 +140,7 @@ public class SignupActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         */
                     }
-                }, 3000);
+                }, 1000);
     }
 
 

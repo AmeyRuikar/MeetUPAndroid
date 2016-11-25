@@ -190,6 +190,8 @@ public class loginActivity extends AppCompatActivity {
                         if (currentAccessToken == null) {
                             //tv_profile_name.setText("");
                             //iv_profile_pic.setImageResource(R.drawable.maleicon);
+                            Toast.makeText(getApplicationContext(), "facebook IN", Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 };
@@ -250,7 +252,7 @@ public class loginActivity extends AppCompatActivity {
                         // onLoginFailed();
                         progress.dismiss();
                     }
-                }, 3000);
+                }, 1000);
     }
 
 

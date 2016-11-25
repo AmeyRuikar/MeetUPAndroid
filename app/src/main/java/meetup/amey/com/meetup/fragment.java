@@ -38,13 +38,7 @@ public class fragment extends FragmentActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
-/*
-        Toolbar tb = (Toolbar) findViewById(R.id.toolbar);
-        tb.setTitle("Meet UP");
-        ((SupportActionBar) getApplicationContext()).setSupportActionBar(tb);
 
-
-*/
 
 
         //setTitle("7 Wonders of the Modern World");
@@ -65,12 +59,12 @@ public class fragment extends FragmentActivity  {
         FloatingActionButton actionButton = (FloatingActionButton)findViewById(R.id.action_button);
 
         actionButton.setOnClickListener(new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View v) {
-                                                Intent intent = new Intent(getApplicationContext(), newEventPlanner.class);
-                                                startActivity(intent);
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), newEventPlanner.class);
+                startActivity(intent);
 
-                                            }
+            }
         });
 
         tl.setupWithViewPager(vp);

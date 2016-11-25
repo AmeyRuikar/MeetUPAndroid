@@ -81,6 +81,103 @@
         android:visibility="invisible"
         android:text="See all events!"/>
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main_relative"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="425dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:background="@color/primary"
+        tools:context="meetup.amey.com.meetup.MapsActivity"
+        android:padding="0dp">
+
+
+
+
+
+        <View android:id="@+id/dummy"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:paddingTop="0dp"
+            android:layout_margin="0dp"
+            android:paddingBottom="0dp"
+            android:layout_centerInParent="true"
+            />
+
+
+
+        <TextView
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Genres : Sports"
+            android:id="@+id/genreMap"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/primary"
+            android:layout_below="@+id/nameEventMaps"
+            android:background="@color/black"
+            android:paddingBottom="0dp"
+            android:textSize="18dp"
+            android:layout_alignStart="@+id/nameEventMaps"
+            android:layout_marginLeft="3dp"/>
+
+
+
+        <TextView
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Rating"
+            android:layout_alignBottom="@+id/genreMap"
+            android:layout_toEndOf="@+id/dummy"
+            android:id="@+id/textView5"
+            android:layout_alignTop="@+id/genreMap"
+            android:backgroundTint="@color/primary"
+            android:background="@color/black"
+            android:paddingBottom="0dp"
+            android:textSize="18dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="50dp"
+
+            />
+
+
+
+        <TextView
+
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"
+            android:shadowColor="@color/fab_material_blue_grey_500"
+            android:text="USC vs Cal Bears football game"
+            android:textSize="10pt"
+            android:backgroundTint="@color/primary"
+            android:background="@color/black"
+            android:paddingTop="5dp"
+            android:paddingBottom="0dp"
+            android:id="@+id/nameEventMaps"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:padding="0dp"
+            android:layout_above="@+id/dummy"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/shareImageView_maps"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_check_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+    </RelativeLayout>
 
 
 
