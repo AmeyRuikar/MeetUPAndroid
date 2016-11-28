@@ -1,5 +1,7 @@
 package meetup.amey.com.meetup;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentActivity;
 
 import com.github.jjobes.slidedatetimepicker.SlideDateTimeListener;
@@ -7,6 +9,7 @@ import com.github.jjobes.slidedatetimepicker.SlideDateTimePicker;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,9 +23,13 @@ public class DateTime extends FragmentActivity {
 
 
     Button currentBtn = null;
+    String which = null;
+    Context m;
 
-    public DateTime(Button cur){
+    public DateTime(Button cur, String whichButton, Context mContext){
         this.currentBtn = cur;
+        this.which = whichButton;
+        this.m = mContext;
     }
 
     public SlideDateTimeListener listener = new SlideDateTimeListener() {
@@ -36,8 +43,30 @@ public class DateTime extends FragmentActivity {
              */
 
 
+
             if(currentBtn != null)
             {
+                if(which.equals("START")){
+                    //Toast.makeText(DateTime.this, "START", Toast.LENGTH_SHORT).show();
+                    Log.i("datetime", "START");
+
+                    SharedPreferences p;
+                    p = m.getSharedPreferences("meetup.amey.com.meetup", Context.MODE_PRIVATE);
+                    p.edit().putString("starttime", Long.toString((long) (date.getTime()/1000.0))).apply();
+
+                }
+                else if(which.equals("END")){
+                   // Toast.makeText(DateTime.this, "END", Toast.LENGTH_SHORT).show();
+                    Log.i("datetime", "END");
+
+                    SharedPreferences p;
+                    p = m.getSharedPreferences("meetup.amey.com.meetup", Context.MODE_PRIVATE);
+                    p.edit().putString("endtime", Long.toString((long) (date.getTime()/1000.0))).apply();
+                    //Long.toString((long) (date.getTime()/1000.0))
+
+                }
+
+
                 currentBtn.setText(mFormatter.format(date));
                 //currentBtn.setGravity(Gravity.LEFT);
             }

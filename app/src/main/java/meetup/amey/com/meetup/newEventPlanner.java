@@ -1,6 +1,8 @@
 package meetup.amey.com.meetup;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.support.v4.app.DialogFragment;
 
@@ -37,7 +40,7 @@ public class newEventPlanner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                DateTime dt = new DateTime(startEvent);
+                DateTime dt = new DateTime(startEvent, "START", getApplicationContext());
 
                 new SlideDateTimePicker.Builder(getSupportFragmentManager())
                         .setListener(dt.listener)
@@ -57,7 +60,7 @@ public class newEventPlanner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                DateTime dt = new DateTime(endEvent);
+                DateTime dt = new DateTime(endEvent, "END",  getApplicationContext());
 
                 new SlideDateTimePicker.Builder(getSupportFragmentManager())
                         .setListener(dt.listener)
@@ -78,6 +81,16 @@ public class newEventPlanner extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                EditText invitedList = (EditText) findViewById(R.id.input_users);
+
+                SharedPreferences p;
+                p = getApplicationContext().getSharedPreferences("meetup.amey.com.meetup", Context.MODE_PRIVATE);
+                Log.i("markers", "edit box"+invitedList.getText().toString());
+                p.edit().putString("invites", invitedList.getText().toString()).commit();
+                Log.i("markers", "edit box read->" + p.getString("invites", null));
+
+
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(intent);
             }

@@ -36,10 +36,11 @@ public class eventAdapter extends ArrayAdapter<eventObject> {
 
         name.setText(localCopy.get(position).getEventName());
         dateTime.setText(localCopy.get(position).getDateTime());
-        people.setText(localCopy.get(position).getPeople());
+        people.setText("with "+localCopy.get(position).getPeople().replace("[", "").replace("]","").replace("\"", ""));
         local.setText(localCopy.get(position).getLocation());
+        local.setVisibility(View.GONE);
 
-        int status = 1;
+        int status = 0;
 
         if(status == 1){
             rowV.setAlpha((float) (0.25));

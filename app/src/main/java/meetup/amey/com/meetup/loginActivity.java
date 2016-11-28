@@ -5,6 +5,8 @@ package meetup.amey.com.meetup;
  */
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -112,8 +114,6 @@ public class loginActivity extends AppCompatActivity {
                 final String[] info = new String[2];
 
 
-
-
                 GraphRequest request = GraphRequest.newMeRequest(
                         loginResult.getAccessToken(),
                         new GraphRequest.GraphJSONObjectCallback() {
@@ -158,6 +158,10 @@ public class loginActivity extends AppCompatActivity {
 
                                     Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                                     intent.putExtra("fbID", facebbok_id);
+
+                                    SharedPreferences p;
+                                    p = getApplicationContext().getSharedPreferences("meetup.amey.com.meetup", Context.MODE_PRIVATE);
+                                    p.edit().putString("thisMember",facebbok_id).commit();
 
                                     Log.i("intent", "Name sent: " + name);
                                     intent.putExtra("name", name);
@@ -214,6 +218,25 @@ public class loginActivity extends AppCompatActivity {
 
         //eof FB integration
         //
+
+
+        SharedPreferences p;
+        p = getSharedPreferences("meetup.amey.com.meetup", Context.MODE_PRIVATE);
+        String storedID = p.getString("thisMember", null);
+
+        if(storedID !=null){
+            new android.os.Handler().postDelayed(
+                    new Runnable() {
+                        public void run() {
+                            // On complete call either onLoginSuccess or onLoginFailed
+                            onLoginSuccess();
+                            // onLoginFailed();
+
+                        }
+                    }, 2000);
+        }
+
+
     }
 
     public void login() {
@@ -297,6 +320,8 @@ public class loginActivity extends AppCompatActivity {
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
+        /*
+
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             _emailText.setError("enter a valid email address");
             valid = false;
@@ -310,6 +335,9 @@ public class loginActivity extends AppCompatActivity {
         } else {
             _passwordText.setError(null);
         }
+
+        */
+
 
         return valid;
     }

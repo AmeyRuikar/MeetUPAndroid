@@ -54,11 +54,13 @@ import android.view.MenuItem;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, OnMapClickListener, OnMapLongClickListener, OnMarkerClickListener {
 
     private GoogleMap googleMap;
+    private GoogleMap googleMapCopy;
     private ArrayList<LatLng> arrayPoints = null;
     private ArrayList<eventMarkerObject> returnedEvents = new ArrayList<eventMarkerObject>();
     PolylineOptions polylineOptions;
     private boolean checkClick = false;
     Button seeEvents;
+    String eventid;
     int flag = 0;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -71,6 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         System.out.println("Before Map Ready");
         googleMap = map;
+        googleMapCopy = map;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -121,8 +124,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     //TODO: clear all the points/map
 
-                    arrayPoints.clear();
-                    googleMap.clear();
 
 
                 }
@@ -151,11 +152,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     public void onClick(View v) {
 
 
-                        Toast.makeText(getApplicationContext(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this);
-                        builder.setTitle("Create this Event at ");
+                        TextView n = (TextView) findViewById(R.id.nameEventMaps);
+
+                        builder.setTitle("Create this Event at " + n.getText().toString());
                         builder.setMessage("Share with others?");
+                        eventid = "";
+
+                        for(int i = 0; i < returnedEvents.size(); i++){
+                            if(returnedEvents.get(i).getEventName().equals(n.getText().toString())){
+                                eventid = returnedEvents.get(i).getEventid();
+                                break;
+                            }
+                        }
 
 
                         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
@@ -165,11 +176,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 //Toast.makeText(getActivity(), titleTextView.getText() + " just make the fragemnt now", Toast.LENGTH_SHORT).show();
 
                                 //later move to async task on post execute
+
+                                new AsyncCreateEvent(getApplicationContext()).execute(eventid);
+                                dialog.dismiss();
+
+                                /*
                                 Intent i = new Intent(MapsActivity.this, fragment.class);
                                 // set the new task and clear flags
                                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                dialog.dismiss();
+
                                 startActivity(i);
+
+                                */
 
                             }
                         });
@@ -291,6 +309,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                     else{
                         n1.setText(returnedEvents.get(i).getGenre() +" - "+returnedEvents.get(i).getSubgenre());
+                    }
+
+                    TextView n2 = (TextView) findViewById(R.id.ratingsMap);
+                    if(!returnedEvents.get(i).getRating().equals("0")){
+                        n2.setText("Rating: "+returnedEvents.get(i).getRating()+"/5");
                     }
 
 

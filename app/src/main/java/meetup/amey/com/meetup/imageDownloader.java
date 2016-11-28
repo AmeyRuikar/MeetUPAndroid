@@ -10,7 +10,7 @@ import java.lang.ref.WeakReference;
 import java.net.MalformedURLException;
 import java.net.URL;
 import android.graphics.BitmapFactory;
-
+import android.util.Log;
 /**
  * Created by ameyruikar on 11/14/16.
  */
@@ -29,6 +29,7 @@ class imageDownloader extends AsyncTask<String, Void, Bitmap> {
         Bitmap bmp = null;
         try {
             url = new URL(params[0]);
+            Log.i("maps", params[0]);
             bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
 
         } catch (MalformedURLException e) {

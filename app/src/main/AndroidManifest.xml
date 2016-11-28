@@ -15,7 +15,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
         <meta-data
@@ -38,12 +38,11 @@
         <activity
             android:name=".SignupActivity"
             android:label="SignupActivity"
-            android:theme="@style/AppTheme.DarkLogin" >
+            android:theme="@style/AppTheme.DarkAll" >
         </activity>
         <activity
             android:name=".fragment"
-            android:label="@string/title_activity_fragment"
-            >
+            android:label="@string/title_activity_fragment" >
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -80,6 +79,11 @@
         <activity
             android:name=".showEventList"
             android:label="@string/title_activity_show_event_list"
+            android:theme="@style/AppTheme.DarkAll" >
+        </activity>
+        <activity
+            android:name=".upcomingDetail"
+            android:label="@string/title_activity_upcoming_detail"
             android:theme="@style/AppTheme.DarkAll">
         </activity>
     </application>

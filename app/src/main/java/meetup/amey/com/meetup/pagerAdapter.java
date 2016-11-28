@@ -19,7 +19,7 @@ public class pagerAdapter extends FragmentStatePagerAdapter {
     Context mContext;
 
 
-    private String titles[] = {"Pending","Up Coming events", "History"};
+    private String titles[] = {"Pending","UpComing events", "History"};
 
     public pagerAdapter(FragmentManager fm, Context m) {
         super(fm);

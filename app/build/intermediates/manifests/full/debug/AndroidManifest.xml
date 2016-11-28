@@ -31,7 +31,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
         <meta-data
@@ -54,7 +54,7 @@
         <activity
             android:name="meetup.amey.com.meetup.SignupActivity"
             android:label="SignupActivity"
-            android:theme="@style/AppTheme.DarkLogin" >
+            android:theme="@style/AppTheme.DarkAll" >
         </activity>
         <activity
             android:name="meetup.amey.com.meetup.fragment"
@@ -95,6 +95,11 @@
         <activity
             android:name="meetup.amey.com.meetup.showEventList"
             android:label="@string/title_activity_show_event_list"
+            android:theme="@style/AppTheme.DarkAll" >
+        </activity>
+        <activity
+            android:name="meetup.amey.com.meetup.upcomingDetail"
+            android:label="@string/title_activity_upcoming_detail"
             android:theme="@style/AppTheme.DarkAll" >
         </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->

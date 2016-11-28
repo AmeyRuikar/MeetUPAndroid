@@ -83,11 +83,31 @@ public class loadEventMarkers extends AsyncTask<String, Void, String> {
                 String g = event.getString("genre");
                 String subg = event.getString("subgenre");
                 String url = event.getString("imgurl");
+                String rating = Double.toString(event.getDouble("rating"));
 
 
+                /*
 
+                if(g.equals("food"))
+                {
+                    localMap.addMarker(new MarkerOptions().position(new LatLng(lat, longitude)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_restaurant_black_24dp)));
+
+                }
+                else if(g.equals("Music") || g.equals("Arts & Theatre")){
+                    localMap.addMarker(new MarkerOptions().position(new LatLng(lat, longitude)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_local_play_black_24dp)));
+
+                }
+                else if(g.equals("Sports")){
+                    localMap.addMarker(new MarkerOptions().position(new LatLng(lat, longitude)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_directions_bike_black_24dp)));
+
+                }
+                else{
+                    localMap.addMarker(new MarkerOptions().position(new LatLng(lat, longitude)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker)));
+
+                }
+                */
                 localMap.addMarker(new MarkerOptions().position(new LatLng(lat, longitude)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker)));
-                localreturnedEvents.add(new eventMarkerObject(eventid, eventName, g, subg, new LatLng(lat, longitude), url));
+                localreturnedEvents.add(new eventMarkerObject(eventid, eventName, g, subg, new LatLng(lat, longitude), url, rating));
 
             }
 

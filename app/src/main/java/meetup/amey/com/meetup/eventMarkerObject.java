@@ -31,13 +31,14 @@ public class eventMarkerObject {
         this.position = position;
     }
 
-    public eventMarkerObject(String eventid, String eventName, String g, String subg, LatLng latLng, String url) {
+    public eventMarkerObject(String eventid, String eventName, String g, String subg, LatLng latLng, String url, String r) {
         this.eventName = eventName;
         this.eventid = eventid;
         this.genre = g;
         this.subgenre = subg;
         this.position = latLng;
         this.url = url;
+        this.rating = r;
     }
 
     public String getEventid() {

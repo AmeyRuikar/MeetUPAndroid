@@ -13,7 +13,7 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@mipmap/ic_launcher"
+        <ImageView android:src="@drawable/lettering"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginBottom="12dp"
@@ -75,7 +75,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/black"
+            android:background="@color/primary"
             android:padding="20px"
             >
 
@@ -83,7 +83,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
+                android:background="@color/primary"
                 android:paddingLeft="20px"
                 >
 
@@ -94,7 +94,8 @@
                     android:text="Adventure Sports"
                     android:gravity="center"
                     android:layout_gravity="left"
-                    android:textSize="16dip" >
+                    android:textSize="16dip"
+                    android:background="@color/black">
                 </TextView>
 
                 <TextView android:id="@+id/pill2"
@@ -104,14 +105,15 @@
                     android:text="Food"
                     android:gravity="center"
                     android:layout_gravity="right"
-                    android:textSize="16dip" />
+                    android:textSize="16dip"
+                    android:background="@color/black" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
+                android:background="@color/primary"
                 android:paddingLeft="20px"
                 >
 
@@ -121,7 +123,8 @@
                     android:layout_margin="5dp"
                     android:text="Adventure Sports"
                     android:gravity="center"
-                    android:textSize="16dip" />
+                    android:textSize="16dip"
+                    android:background="@color/black" />
 
                 <TextView android:id="@+id/pill4"
                     android:layout_width="130dp"
@@ -129,7 +132,8 @@
                     android:layout_margin="5dp"
                     android:text="Food"
                     android:gravity="center"
-                    android:textSize="16dip" />
+                    android:textSize="16dip"
+                    android:background="@color/black" />
             </LinearLayout>
 
 
@@ -139,6 +143,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:padding="5px"
             android:weightSum="1">
@@ -159,13 +164,6 @@
             </android.support.design.widget.TextInputLayout>
 
             <!-- add Button -->
-            <ImageButton
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="17dp"
-                android:src="@mipmap/add_button3"
-                android:id="@+id/add_button" />
 
         </LinearLayout>
 

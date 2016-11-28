@@ -176,14 +176,14 @@ public class cardsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
 
-                    Toast.makeText(getActivity(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getActivity(), "now sharing the event with others", Toast.LENGTH_SHORT).show();
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(showEvents);
                     builder.setTitle("Create this Event at " + titleTextView.getText());
                     builder.setMessage("Share with others?");
 
-                    for(int i = 0; i < listCopy.size(); i++){
-                        if(listCopy.get(i).getEventName().equals(titleTextView.getText())){
+                    for (int i = 0; i < listCopy.size(); i++) {
+                        if (listCopy.get(i).getEventName().equals(titleTextView.getText())) {
                             selectedEvent = listCopy.get(i).getEventid();
                             break;
                         }
@@ -197,13 +197,17 @@ public class cardsFragment extends Fragment {
                             //Toast.makeText(getActivity(), titleTextView.getText() + " just make the fragemnt now", Toast.LENGTH_SHORT).show();
 
 
+                            new AsyncCreateEvent(mContext).execute(selectedEvent);
+                            dialog.dismiss();
                             //new async task
                             //later move to async task on post execute
+                            /*
                             Intent i = new Intent(showEvents, fragment.class);
                             // set the new task and clear flags
                             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             dialog.dismiss();
                             startActivity(i);
+                            */
 
                         }
                     });

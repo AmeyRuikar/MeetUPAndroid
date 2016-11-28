@@ -3,6 +3,7 @@ package meetup.amey.com.meetup;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
@@ -14,18 +15,23 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import java.util.ArrayList;
 import java.net.*;
 import java.util.Locale;
 import android.util.*;
+import android.widget.Toast;
 
 
 /**
  * Created by ameyruikar on 10/16/16.
  */
 public class upComingEvents extends Fragment {
+
+    ArrayList<eventObject> newEvents2 = new ArrayList<eventObject>();
+    Context m;
 
 
     public upComingEvents() {
@@ -48,12 +54,40 @@ public class upComingEvents extends Fragment {
         dp.getSize(pt);
         int width = pt.x;
 
-        Context m = this.getContext();
+        m = this.getContext();
 
 
         //new loadCurrentTab(v, m, width).execute();
 
-            Snackbar.make(v, "Advertisement, Try coffee @ philzz", Snackbar.LENGTH_LONG).show();
+
+        ListView pending = (ListView) v.findViewById(R.id.pendingList);
+        eventAdapter    adapter = new eventAdapter(m, newEvents2);
+        pending.setAdapter(adapter);
+
+        new AsyncGetEvents(m, newEvents2, adapter).execute("Upcoming");
+
+        Snackbar.make(v, "Advertisement, Try coffee @ philzz", Snackbar.LENGTH_LONG).show();
+
+        pending.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getActivity(), newEvents2.get(position).getEventName() + " started", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(m, upcomingDetail.class);
+                intent.putExtra("eventName", newEvents2.get(position).getEventName());
+                intent.putExtra("dateTime", newEvents2.get(position).getDateTime());
+                intent.putExtra("endTime", newEvents2.get(position).getEndTime());
+                intent.putExtra("people", newEvents2.get(position).getPeople());
+                intent.putExtra("location", "");
+                intent.putExtra("creator", newEvents2.get(position).getCreatedby());
+                intent.putExtra("X", newEvents2.get(position).getX());
+                intent.putExtra("Y", newEvents2.get(position).getY());
+                intent.putExtra("historyid", newEvents2.get(position).getHistoryid());
+                startActivity(intent);
+
+
+            }
+        });
 
 
 

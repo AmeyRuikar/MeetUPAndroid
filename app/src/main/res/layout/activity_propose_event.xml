@@ -150,7 +150,8 @@
                     android:text="Down Vote, Up vote or decline invite"
                     android:layout_alignParentTop="true"
                     android:layout_alignStart="@+id/imgMap"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/lightBanner"/>
 
                 <LinearLayout
                 android:orientation="horizontal"
@@ -190,7 +191,7 @@
                     />
 
                 <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/action_button"
+                    android:id="@+id/action_button_decline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                    android:layout_gravity="right"
@@ -201,7 +202,7 @@
                     app:pressedTranslationZ="12dp"
                     />
 
-            </LinearLayout>L
+            </LinearLayout>
                 <!--
 
                 <android.support.v7.widget.AppCompatButton

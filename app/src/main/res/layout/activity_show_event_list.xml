@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             app:fabDrawable="@drawable/ic_build_white_24dp"
+            android:visibility="gone"
             app:fabBackgroundTint="#000000"
             app:fabGravity="bottom_end"
             app:fabMenu="@menu/speeddial"
